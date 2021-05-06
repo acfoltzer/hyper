@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1620321616907,
+  "lastUpdate": 1620321629623,
   "repoUrl": "https://github.com/acfoltzer/hyper",
   "entries": {
     "connect": [
@@ -29,6 +29,36 @@ window.BENCHMARK_DATA = {
             "name": "http_connector",
             "value": 61304,
             "range": "± 6852",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "acfoltzer@fastly.com",
+            "name": "Adam C. Foltzer",
+            "username": "acfoltzer"
+          },
+          "committer": {
+            "email": "acfoltzer@fastly.com",
+            "name": "Adam C. Foltzer",
+            "username": "acfoltzer"
+          },
+          "distinct": true,
+          "id": "ccaeb4854fc933f64177c5591412f9bd893af50a",
+          "message": "feat(error): #2462 predicates for too-large and status parse errors\n\nThe discussion in #2462 opened up some larger questions about more comprehensive approaches to the\nerror API, with the agreement that additional methods would be desirable in the short term. These\nmethods address an immediate need of our customers, so I would like to get them in first before we\nflesh out a future solution.\n\nOne potentially controversial choice here is to still return `true` from `is_parse_error()` for\nthese variants. I hope the naming of the methods make it clear that the new predicates are\nrefinements of the existing one, but I didn't want to change the behavior of `is_parse_error()`\nwhich would require a major version bump.",
+          "timestamp": "2021-05-06T10:14:52-07:00",
+          "tree_id": "a64db4ee4627f031f1a961ce368b46b3585210a3",
+          "url": "https://github.com/acfoltzer/hyper/commit/ccaeb4854fc933f64177c5591412f9bd893af50a"
+        },
+        "date": 1620321622393,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "http_connector",
+            "value": 70049,
+            "range": "± 8727",
             "unit": "ns/iter"
           }
         ]
